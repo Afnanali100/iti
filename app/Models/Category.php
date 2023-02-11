@@ -10,7 +10,7 @@ class Category extends Model
 {
     use HasFactory;
     protected $table ='category';
-     //protected $primaryKey = 'category_id';
+     protected $primaryKey = 'id';
 
       protected $fillable = ['name'];
     // created_at update_at
@@ -21,9 +21,7 @@ class Category extends Model
         // return $this->hasMany(Product::class, 'cat_id', 'category_id');
         return $this->hasMany(Product::class,'cat_id');
     }
-    public function getPaginatedProducts()
-    {
-        return $this->products()->paginate(5);
-    }
+
+   
 }
 // category product cat_id

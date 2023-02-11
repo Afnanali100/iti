@@ -72,7 +72,6 @@ class ProductController extends Controller
         /*******  method 2  ********** */
         $product = Product::find($id);
         $product->name = $request->name;
-        $product->description = $request->description;
         $product->price = $request->price;
         $product->quantity = $request->quantity;
         $product->save();
@@ -80,11 +79,11 @@ class ProductController extends Controller
         return redirect()->route('products.index');
     }
   public function create(){
-return view('orders\create');
+return view('products\create');
 }
 public function store(request $data){
-  Order::create($data->except('_token'));
-  return redirect()->route('order.index');
+  Product::create($data->except('_token'));
+  return redirect()->route('products.index');
 }
 
 }

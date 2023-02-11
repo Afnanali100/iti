@@ -22,23 +22,24 @@ public function destroy($id){
 //   $user=User::where('id',$id)->delete();
 $cat=Category::find($id);
 $cat->destroy($id);
-  return redirect()->route('categories.index');
+  return redirect()->route('category.index');
+}
+
+public function update(Request $data, $id){
+$cat=Category::find($id);
+$cat->update($data->except('_method', '_token'));
+return redirect()->route('category.index');
 }
 public function edit($id){
  $cat=Category::where('id',$id)->first();
    return view ('categories\edit',['category'=>$cat]);
-}
-public function update(Request $data, $id){
-$cat=Category::find($id);
-$cat->update($data->except('_method', '_token'));
-return redirect()->route('categories.index');
 }
 public function create(){
 return view('categories\create');
 }
 public function store(request $data){
   Category::create($data->except('_token'));
-  return redirect()->route('categories.index');
+  return redirect()->route('category.index');
 }
 
 

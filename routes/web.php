@@ -63,20 +63,20 @@ Route::post('/products/store', [ProductController::class, 'store'])
 Route::get('/category', [CategoryController::class, 'index'])->name('category.index');
 Route::get('/category/show/{id}', [CategoryController::class, 'show'])->name('category.show');
 
-Route::delete('/category/delete/{id}', [ProductController::class, 'destroy'])
+Route::delete('/category/delete/{id}', [CategoryController::class, 'destroy'])
     ->name('category.delete');
 
 
-Route::get('/category/edit/{id}', [ProductController::class, 'edit'])
+Route::get('/category/edit/{id}', [CategoryController::class, 'edit'])
     ->name('category.edit');
 
-Route::get('/category/create', [ProductController::class, 'create'])
+Route::get('/category/create', [CategoryController::class, 'create'])
     ->name('category.create');
 
-Route::put('/category/update/{id}', [ProductController::class, 'update'])
+Route::put('/category/update/{id}', [CategoryController::class, 'update'])
     ->name('category.update');
 
-Route::post('/category/store', [ProductController::class, 'store'])
+Route::post('/category/store', [CategoryController::class, 'store'])
     ->name('category.store');
 
 
@@ -86,8 +86,9 @@ Route::get('/order/{id}', [OrderController::class, 'show'])->name('order.show');
 Route::delete('/order/delete/{id}',[OrderController::class,'destroy'])->name('orders.destroy');
 Route::get('/order/edit/{id}', [OrderController::class, 'edit'])->name('order.edit');
 Route::put('/order/update/{id}', [OrderController::class, 'update'])->name('order.update');
-Route::get('/order/create', [OrderController::class, 'create'])->name('order.create');
-Route::post('/order/store', [OrderController::class, 'store'])->name('order.store');
+Route::get('/order/create', [OrderController::class,'create'])->name('order.create');
+
+Route::post('/order/store', [OrderController::class,'store'])->name('order.store');
 // mvc
 // route
 

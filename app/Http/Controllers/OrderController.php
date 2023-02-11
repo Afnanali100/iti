@@ -10,7 +10,7 @@ class OrderController extends Controller
     //
     public function index()
     {
-        $orders = Order::paginate(5);
+        $orders = Order::get();
         return view('orders.index', ['orders' => $orders]);
     }
     public function show($id)
@@ -36,10 +36,8 @@ public function create()
 
         return view('orders\create');
     }
-
-
  public function store(request $data){
- Order::create($data->except('_token'));
+Order::create($data->except('_token'));
  return redirect()->route('order.index');
 
  }

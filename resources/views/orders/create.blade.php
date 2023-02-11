@@ -11,16 +11,23 @@
 
     <form action="{{ route('order.store') }}" method="POST" >
         @csrf
-        
-  total<input type="text" name="total" id="" value="">
-  user_id<input type="text" name="user_id" id="" value=""  >
+
+  total  <input type="text" name="total" id="" value="">
+
+            <div class="col-3">
+            <select name="user_id" id="">
+            <option value="13">afnan</option>
+            <option value="14">ahmed</option>
+
+            </select>
+             </div>
 
     <button type="submit">submit</button>
 </form>
 
 
 
-    <form action="{{ route('users.index') }}">
+    <form action="{{ route('order.index') }}">
         <button type="submit">return</button>
     </form>
 </body>

@@ -10,7 +10,7 @@ class Product extends Model
 {
     use HasFactory;
      protected $table = 'product';
-    protected $fillable = ['name', 'price', 'quantity'];
+    protected $fillable = ['name', 'price', 'quantity','cat_id'];
     // created_at update_at
     public $timestamps = false;
     protected $with = ['category'];

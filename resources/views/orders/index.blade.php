@@ -2,7 +2,8 @@
 @section('content')
 
 <a href="{{ route('order.create') }}" class="btn btn-primary p-1 m-3">create order</a>
-{{-- @dd($orders) --}}
+
+ {{-- @dd($orders) --}}
     <table>
         <thead>
             <tr>
@@ -21,6 +22,7 @@
                     <td>{{ $order->user->user_name }} </td>
                     <td>{{ $order->created_at }} </td>
                     <td>
+                        
                         <form action="{{ route('order.show', $order->id) }}">
                             <button type="submit">show</button>
                         </form>
@@ -40,5 +42,5 @@
         </tbody>
     </table>
 
-    {{ $orders->links() }}
+
 @endsection

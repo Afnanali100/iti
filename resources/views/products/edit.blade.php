@@ -21,11 +21,6 @@
                 <input type="text" class="form-control" name="name" value="{{ $product->name }}" id="">
             </div>
             <div class="col-3">
-                <label for="description" class="form-label">description</label>
-                <textarea class="form-control" name="description" cols="30" rows="5">{{ $product->description }}</textarea>
-
-            </div>
-            <div class="col-3">
                 <label for="price" class="form-label">price</label>
                 <input type="text" class="form-control" name="price" value="{{ $product->price }}" id="">
             </div>

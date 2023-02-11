@@ -19,7 +19,7 @@
 
 
     <form action="{{ route('category.index') }}">
-        <button type="submit">return</button>
+    <button type="submit">return</button>
     </form>
 </body>
 </html>

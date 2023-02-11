@@ -20,11 +20,6 @@
                 <input type="text" class="form-control" name="name" id="">
             </div>
             <div class="col-3">
-                <label for="description" class="form-label">description</label>
-                <textarea class="form-control" name="description" cols="30" rows="5"></textarea>
-
-            </div>
-            <div class="col-3">
                 <label for="price" class="form-label">price</label>
                 <input type="text" class="form-control" name="price" id="">
             </div>
@@ -32,6 +27,14 @@
                 <label for="quantity" class="form-label">quantity</label>
                 <input type="number" class="form-control" name="quantity" id="">
             </div>
+            <div class="col-3">
+            <select name="cat_id" id="">Category
+            <option value="1">cars</option>
+            <option value="2">bikles</option>
+            <option value="2">trains</option>
+            <option value="4">plans</option>
+            </select>
+             </div>
             <input type="submit" class="form-action">
         </form>
     </div>

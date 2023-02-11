@@ -13,13 +13,14 @@
             </tr>
         </thead>
         <tbody>
+        
             @foreach ($products as $product)
-                <tr class="@if ($loop->first) bg-gray @endif">
+                <tr>
                     <td>{{ $product->id }} </td>
                     <td>{{ $product->name }} </td>
                     {{-- eager loading --}}
                     {{-- lazy loading --}}
-                    <td>{{ $product->category->name }}</td>
+                     <td>{{ $product->category->name }}</td>
                     <td>{{ $product->price }} </td>
 
                     <td>{{ $product->created_at }} </td>
